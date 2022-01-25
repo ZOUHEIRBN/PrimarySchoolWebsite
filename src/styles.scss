@@ -12,23 +12,78 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$PrimarySchoolCom-primary: mat-palette($mat-indigo);
-$PrimarySchoolCom-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// $PrimarySchoolCom-primary: mat-palette($mat-indigo);
+// $PrimarySchoolCom-accent: mat-palette($mat-pink, A200, A100, A400);
+
+$dark-text: #302e39;
+$light-text: #fae1e8;
+$light-background: #e7e6f0;
+$dark-background: #251c2c;
+
+
+$mat-primary: (
+  main: #cc336d,
+  lighter: #f0c2d3,
+  darker: #b92050,
+  200: #cc336dce, // For slide toggle,
+  contrast : (
+    main: $light-text,
+    lighter: $dark-text,
+    darker: $light-text,
+  )
+);
+$theme-primary: mat-palette($mat-primary, main, lighter, darker);
+
+
+$mat-accent: (
+  main: #100067,
+  lighter: #b7b3d1,
+  darker: #09004a,
+  200: #0f0067ce, // For slide toggle,
+  contrast : (
+    main: $light-text,
+    lighter: $dark-text,
+    darker: $light-text,
+  )
+);
+$theme-accent: mat-palette($mat-accent, main, lighter, darker);
+
+
 
 // The warn palette is optional (defaults to red).
-$PrimarySchoolCom-warn: mat-palette($mat-red);
+// $PrimarySchoolCom-warn: mat-palette($mat-red);
+
+$mat-warn: (
+  main: #960000,
+  lighter: #e0b3b3,
+  darker: #790000,
+  200: #960000, // For slide toggle,
+  contrast : (
+    main: $light-text,
+    lighter: $dark-text,
+    darker: $light-text,
+  )
+);
+$theme-warn: mat-palette($mat-warn, main, lighter, darker);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$PrimarySchoolCom-light: mat-light-theme($PrimarySchoolCom-primary, $PrimarySchoolCom-accent, $PrimarySchoolCom-warn);
-$PrimarySchoolCom-dark: mat-dark-theme($PrimarySchoolCom-primary, $PrimarySchoolCom-accent, $PrimarySchoolCom-warn);
+// $PrimarySchoolCom-light: mat-light-theme($PrimarySchoolCom-primary, $PrimarySchoolCom-accent, $PrimarySchoolCom-warn);
+// $PrimarySchoolCom-dark: mat-dark-theme($PrimarySchoolCom-primary, $PrimarySchoolCom-accent, $PrimarySchoolCom-warn);
+
+$light-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+$dark-theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($PrimarySchoolCom-light);
-@include angular-material-theme($PrimarySchoolCom-dark);
+@include angular-material-theme($light-theme);
+@include angular-material-theme($dark-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
+*{
+  font-family: 'Poppins', "Helvetica Neue", sans-serif;
+}
 html, body { height: 100%; }
-body { margin: 0; font-family: Raleway, "Helvetica Neue", sans-serif; }
+body { margin: 0; }

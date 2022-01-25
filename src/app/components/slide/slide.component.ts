@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SchoolEvent } from 'src/app/models/Event';
 
 @Component({
   selector: 'slide',
@@ -6,11 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./slide.component.scss']
 })
 export class SlideComponent implements OnInit {
-  @Input() mediaPath = '';
-  @Input() mediaType = 'image';
+  @Input() school_event:SchoolEvent;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.school_event)
   }
 
 }
