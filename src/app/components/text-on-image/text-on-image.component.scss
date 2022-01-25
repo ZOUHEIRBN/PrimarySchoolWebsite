@@ -1,0 +1,40 @@
+
+
+.container{
+  flex-grow: 1;
+  background-color: var(--dark-background);
+  height: 100px;
+  margin: 10px;
+  overflow: hidden;
+  *{
+    transition: all .9s ease-in-out;
+  }
+  > div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: stretch;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      top: -100%;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    h2{
+      transform: scale(1.2);
+    }
+    &:hover{
+      img{
+        transform: scale(1.2);
+        opacity: .7;
+      }
+      h2{
+        transform: scale(1.2);
+      }
+    }
+
+}

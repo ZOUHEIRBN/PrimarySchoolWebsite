@@ -18,10 +18,23 @@ div.main-slide-container{
   }
 }
 div.info-content{
+
+  width: calc(100% - 3vmax);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
   position: absolute;
-  width: 100%;
-  padding: 10px;
   bottom: 0;
+
+  padding: 1.5vmax;
   color: white;
   background: linear-gradient(0deg, black, transparent);
+
+  time{
+    font-weight: 100;
+    font-size: x-small;
+  }
 }

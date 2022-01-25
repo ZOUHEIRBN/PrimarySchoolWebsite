@@ -80,10 +80,20 @@ $dark-theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 @include angular-material-theme($light-theme);
 @include angular-material-theme($dark-theme);
 
-/* You can add global styles to this file, and also import other style files */
 
-*{
-  font-family: 'Poppins', "Helvetica Neue", sans-serif;
+$theme-typography: mat-typography-config(
+  $font-family: 'Poppins'
+);
+
+@include angular-material-typography($theme-typography);
+
+/* You can add global styles to this file, and also import other style files */
+:root{
+  --light-text: $light-text;
+  --dark-text: $dark-text;
+  --light-background: $light-background;
+  --dark-background: $dark-background;
 }
-html, body { height: 100%; }
+
+html, body { height: 100vh; overflow: hidden;}
 body { margin: 0; }

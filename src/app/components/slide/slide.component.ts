@@ -12,7 +12,6 @@ export class SlideComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.school_event)
   }
 
 }

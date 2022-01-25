@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-// import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 // import { MatToolbarModule } from '@angular/material/toolbar';
 // import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -13,12 +14,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomepageViewComponent } from './views/homepage-view/homepage-view.component';
 import { SlideComponent } from './components/slide/slide.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { TextOnImageComponent } from './components/text-on-image/text-on-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageViewComponent,
-    SlideComponent
+    SlideComponent,
+    TextOnImageComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,9 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     BrowserAnimationsModule,
     IvyCarouselModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
